@@ -88,7 +88,7 @@ U2 = fltr(U2)
 ##########  print in consol
 
 prn = "{:^{w}}| "*7
-prn1 = '{:^{w}}| {:^{w}}| {:^{w}}| {:^{w}}| %{:<{w1}}| %{:<{w1}}| %{:<{w1}}|'
+prn1 = '{!s:^{w}}| {!s:^{w}}| {!s:^{w}}| {!s:^{w}}| %{:<{w1}}| %{:<{w1}}| %{:<{w1}}|'
 print(prn.format('Xpoint',"0.Exact","1.Interp.","2.Discrt." , "Err_1,0_" ,"Err_2,0_" ,"Err_1,2_" , w = 13,w1 = 8))
 print('-'*105)
 
