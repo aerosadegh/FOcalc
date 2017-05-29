@@ -3,8 +3,10 @@ from mpmath import mp , mpf # , exp,sqrt
 from mpmath import diff as mpdiff
 mp.pretty = True
 
-
-import matplotlib.pyplot as plt
+try:
+    import matplotlib.pyplot as plt
+except:
+    print('mathplotlib error!!!')
 
 def _g(x):
     return x**4

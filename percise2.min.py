@@ -52,7 +52,7 @@ n = 4   # Term {i}
 x = [i*h for i in range(a,b)]
 p0 = [exp(-x[i]) for i in range(len(x))]
 
-t = 1.5
+t = 0.5
 
 ####  Calc.
 t1 = time()
@@ -91,16 +91,17 @@ prn = "{:^{w}}| "*7
 prn1 = '{:^{w}}| {:^{w}}| {:^{w}}| {:^{w}}| %{:<{w1}}| %{:<{w1}}| %{:<{w1}}|'
 print(prn.format('Xpoint',"0.Exact","1.Interp.","2.Discrt." , "Err_1,0_" ,"Err_2,0_" ,"Err_1,2_" , w = 13,w1 = 8))
 print('-'*105)
+
 for i in range(len(U0)):
     print(prn1.format(mpf(x[i]),
-                     U0[i],
-                     U1[i],
-                     U2[i],
-                     round((U1[i]-U0[i])/U0[i]*100,2),
-                     round((U2[i]-U0[i])/U0[i]*100,2),
-                     round((U1[i]-U2[i])/U0[i]*100,2),
-                     w =13,w1=12))
-
+                    U0[i],
+                    U1[i],
+                    U2[i],
+                    round((U1[i]-U0[i])/U0[i]*100,2),
+                    round((U2[i]-U0[i])/U0[i]*100,2),
+                    round((U1[i]-U2[i])/U0[i]*100,2),
+                    w =13,w1=12))
+    
 print('-'*105)
 print("Time took:"+" "*18+'| {:^{w}.5}(s)| {:^{w}.5}(s)|'.format(t3-t2,t2-t1,w=10))
 print('Program took {:.5} s.'.format(t3-t1))
